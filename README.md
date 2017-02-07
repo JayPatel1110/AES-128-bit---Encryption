@@ -55,14 +55,19 @@ Description about all code files as below:
 6. Project 2_JMD_Final_modified AES - The code is for modified implementation of AES, where The the row number 4 and 5 of SBox were interchanged.
 
 7. Project 2_JMD_Final - The code is dedicated for original AES implementation. Sample output is given as below.
+
 ===========================================================================================================
 Advance Security Encryption programmed in Python(2.7.12) by "Savan Darji(M.Eng Student)@Uwindsor"
 ===========================================================================================================
 Enter the data:00112233445566778899aabbccddeeff
+
 Enter the key:000102030405060708090a0b0c0d0e0f
+
 Original Plaintext and Key:
 Input: 00112233445566778899aabbccddeeff
+
 Key:   000102030405060708090a0b0c0d0e0f
+
 ==========================================================================================================
 Key Schedule Results for Each Round:
 ==========================================================================================================
