@@ -1,4 +1,3 @@
-from numpy import matrix as mat
 import math
 def binary(N):# hex(string) to binary(string) conversion 
     log=int(math.log(16,2))
@@ -39,26 +38,20 @@ def ark(data,key):
         a1=data[t]+data[t+1]
         d.append(a1)
         t+=2
-#   print len(d)
     t=0
     while t<len(key):
         a2=key[t]+key[t+1]
         k.append(a2)
         t+=2
-#   print k
     t=0
     out=[]
     while t<len(d):
         d1=d[t]
         k1=k[t]
-#   d1=lst(d1) not required actually because for i,j in (N1,N2) takes one element at a time
-#   k2=lst(k1) same as above
         d1=binary(d1)
         k1=binary(k1)
         temp0=xor(d1,k1)
-        print temp0
         temp0=nonlst(temp0)
-        print temp0
         temp0=hexa(temp0)
         if temp0=='0':
             temp0='00'
@@ -96,6 +89,5 @@ def ark(data,key):
             pass
         out.append(temp0)
         t+=1
-#    print out
     return out
 print ark(data,key)
