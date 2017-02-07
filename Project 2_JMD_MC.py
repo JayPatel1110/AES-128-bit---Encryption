@@ -1,14 +1,15 @@
 ##### mix column #######
-import numpy as np
 import math
-cnn=['c5','4c','c5','4c','c5','4c','c5','4c','c5','4c','c5','4c','c5','4c','c5','4c']
-#cnn=['a7', 'be', '1a', '69', '97', 'ad', '73', '9b', 'd8', 'c9', 'ca', '45', '1f', '61', '8b', '61']
-#cnn=['63', '53', 'e0', '8c', '09', '60', 'e1', '04', 'cd', '70', 'b7', '51', 'ba', 'ca', 'd0', 'e7']
-print'Input:',cnn
 const=['0','0','0','1','1','0','1','1']
-
+def step(N):# make a word of 2 hex digits
+    t=0
+    din=[]
+    while t<len(N):
+        a1=N[t]+N[t+1]
+        din.append(a1)
+        t+=2
+    return din
 def lshift(N,N1):return N[(len(N)-N1):]+N[:(len(N)-N1)]
-#############repeat function##############
 def binary(N):# hex(string) to binary(string) conversion 
     log=int(math.log(16,2))
     bits=len(N)*log
@@ -26,7 +27,6 @@ def nonlst(N):#####repeat######
     s1=map(str,N)
     s1=''.join(s1)
     return s1
-#####repeat function######
 def xor(N,N2):# N2(string) xor N3(string)[bitlevel]; output e is string list
     e=[]
     for i,j in zip(N,N2):
@@ -97,6 +97,7 @@ def poly(N,N1):#input:N-strings(4 hex nos.) N1-required shift for mc, output:str
         if mc[rpt]=='3':
             buf=num
             num=left(num)
+            
             if buf[0]=='1':
                 num=xor(num,const)# bitwise xor operation; both in:string, one out: string
             num=xor(num,buf)
@@ -119,7 +120,7 @@ def poly(N,N1):#input:N-strings(4 hex nos.) N1-required shift for mc, output:str
     omc=xor(omc,otemp[2])
     omc=xor(omc,otemp[3])
     omc=nonlst(omc)
-    omc=hexa(omc)
+    omc=fix(hexa(omc))
     return omc
 def MC(N):
     mcf=[]
@@ -138,5 +139,11 @@ def MC(N):
         rpt+=jump
         gain+=jump
     return mcf
+#cnn=['c5','4c','c5','4c','c5','4c','c5','4c','c5','4c','c5','4c','c5','4c','c5','4c']
+#cnn=['a7', 'be', '1a', '69', '97', 'ad', '73', '9b', 'd8', 'c9', 'ca', '45', '1f', '61', '8b', '61']
+#cnn=['63', '53', 'e0', '8c', '09', '60', 'e1', '04', 'cd', '70', 'b7', '51', 'ba', 'ca', 'd0', 'e7']
+cnn=raw_input('Enter the data:')
+print'Input:',cnn
+cnn=step(cnn)
 dnn=MC(cnn)
 print'Output:',dnn
