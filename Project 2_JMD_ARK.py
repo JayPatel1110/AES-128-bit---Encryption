@@ -27,10 +27,10 @@ def nonlst(N):
     s1=map(str,N)
     s1=''.join(s1)
     return s1
-#data=raw_input('Enter the data string in Hex format:')
-#key=raw_input('Enter the key in Hex format:')
-data='00112233445566778899aabbccddeeff'
-key='000102030405060708090a0b0c0d0e0f'
+data=raw_input('Enter the data string in Hex format:')
+key=raw_input('Enter the key in Hex format:')
+#data='00112233445566778899aabbccddeeff'
+#key='000102030405060708090a0b0c0d0e0f'
 def ark(data,key):
     t=0
     d=[]
