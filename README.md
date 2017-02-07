@@ -1,7 +1,10 @@
 # AES-128-bit---Encryption
 Software Implementation of the encryption algorithm using python 2.7.12
+
 This repository includes my project work with every module implementation seperately with final and modified version of the AES encryption.
+
 Description about all code files as below:
+
 1. Project 2_JMD_KS - The file contains the code for the step called Key Schedule of AES.
                       Input - 32 hex numbers (128 bit) i.e. 000102030405060708090a0b0c0d0e0f
                       Output - 11 python list for Round 0 to 10 each has 32 hex numbers (128 bit)
