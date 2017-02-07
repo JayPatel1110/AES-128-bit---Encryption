@@ -1,7 +1,17 @@
 #####shift row function#######
+def step(N):# make a word of 2 hex digits
+    t=0
+    din=[]
+    while t<len(N):
+        a1=N[t]+N[t+1]
+        din.append(a1)
+        t+=2
+    return din
 def shift(l2,n2): # for left shift operation
     return l2[n2:] + l2[:n2]
-r3=['63', 'ca', 'b7', '04', '09', '53', 'd0', '51', 'cd', '60', 'e0', 'e7', 'ba', '70', 'e1', '8c']
+#r3=['63', 'ca', 'b7', '04', '09', '53', 'd0', '51', 'cd', '60', 'e0', 'e7', 'ba', '70', 'e1', '8c']
+r3=raw_input('Enter the data:')
+r3=step(r3)
 print 'Input:',r3
 def sr(r3in):
     rpt=0
