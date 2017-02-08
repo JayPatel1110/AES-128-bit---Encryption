@@ -6,7 +6,9 @@ This repository includes my project work with every module implementation sepera
 Description about all code files as below:
 
 1. Project 2_JMD_KS - The file contains the code for the step called Key Schedule of AES.
+
                       Input - 32 hex numbers (128 bit) i.e. 000102030405060708090a0b0c0d0e0f
+                      
                       Output - 11 python list for Round 0 to 10 each has 32 hex numbers (128 bit)
                                Round 0 :
                                Key: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '0c', '0d', '0e', '0f']
