@@ -1,4 +1,6 @@
 # AES-128-bit---Encryption
+Comments and reviews will be appreciated: If you need any help please don't hesitate to contact me on : darji@uwindsor.ca or savanddarji@gmail.com
+
 Software Implementation of the encryption algorithm using python 2.7.12
 
 This repository includes my project work with every module implementation seperately with final and modified version of the AES encryption.
